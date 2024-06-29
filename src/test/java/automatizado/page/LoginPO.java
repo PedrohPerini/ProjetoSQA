@@ -18,12 +18,15 @@ public class LoginPO extends BasePO {
 
     @FindBy(xpath = "//*[@id=\"mensagem\"]")
     public WebElement spanMensagem;
+
+    @FindBy(xpath = "/html/body/div/form/div[1]/button")
+    public WebElement fecharMensagemErroLogin;
     
     public LoginPO(WebDriver driver) {
         super(driver);
     }
 
-    public String obterResultado(){
+    public String mensagemErro(){
         return this.spanMensagem.getText();
     }
 

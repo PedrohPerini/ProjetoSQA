@@ -46,6 +46,7 @@ public class ProdutosTest extends baseTest {
         .adcData("20/06/2024")
         .builder();
         produtosPage.btnSalvarModal.click();
+        //*TODO: a primeira vez que clica para abrir o formulario tem que dar double clik. Arrumar para que o modal abra no primeiro click */
 
     }
     @Test
@@ -128,7 +129,7 @@ public class ProdutosTest extends baseTest {
         .adcData("20/06/2024")
         .builder();
         produtosPage.btnSalvarModal.click();
-        //TODO: Implementar a regra na quantida que permita somente valores naturais
+        //TODO: Implementar a regra na quantidade que permita somente valores naturais
 
     }
 
