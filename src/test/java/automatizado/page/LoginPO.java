@@ -26,5 +26,14 @@ public class LoginPO extends BasePO {
     public String obterResultado(){
         return this.spanMensagem.getText();
     }
+
+    public void executarLogar(String email, String senha){
+        inputEmail.clear();
+        inputSenha.clear();
+        inputEmail.sendKeys(email);
+        inputSenha.sendKeys(senha);
+        btnEntrar.click();
+    }
+
     
 }
