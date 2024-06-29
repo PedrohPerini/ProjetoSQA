@@ -21,14 +21,12 @@ public class LoginPO extends BasePO {
 
     @FindBy(xpath = "//*[@id=\"link\"]")
     public WebElement linkRecuperarSenha;
+
+    @FindBy(xpath = "/html/body/div/form/div[1]/button")
+    public WebElement fecharMensagemErroLogin;
     
     public LoginPO(WebDriver driver) {
         super(driver);
-    }
-
-    public void escrever(WebElement input, String texto) {
-        input.clear();
-        input.sendKeys(texto);
     }
 
     public String obterResultado(){
