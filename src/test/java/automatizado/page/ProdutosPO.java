@@ -45,7 +45,10 @@ public class ProdutosPO extends BasePO  {
     @FindBy(xpath ="//*[@id=\"mensagem\"]")
     public WebElement mensagemErro;
 
-    public String obterResultado(){
+    @FindBy(xpath = "//*[@id=\"cadastro-produto\"]/div/div/div[2]/div[1]/button")
+    public WebElement fecharMensagemErro;
+
+    public String obterResultadoProdutos(){
         return this.mensagemErro.getText();
     }
 

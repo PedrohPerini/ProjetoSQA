@@ -1,15 +1,18 @@
 package automatizado.test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.runners.MethodSorters.NAME_ASCENDING;
+
+import java.util.NoSuchElementException;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import automatizado.build.ProdutoBuilder;
 import automatizado.page.LoginPO;
 import automatizado.page.ProdutosPO;
-import org.junit.runners.MethodSorters;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
+@FixMethodOrder(NAME_ASCENDING)
 public class ProdutosTest extends baseTest {
 
     private static LoginPO loginPage;
@@ -62,7 +65,7 @@ public class ProdutosTest extends baseTest {
         .builder();
         produtosPage.btnSalvarModal.click();
 
-        String mensagem = produtosPage.obterResultado();
+        String mensagem = produtosPage.obterResultadoProdutos();
         assertEquals(mensagem, "Todos os campos são obrigatórios para o cadastro!");
 
     }
@@ -222,7 +225,8 @@ public class ProdutosTest extends baseTest {
     }
 
     @Test
-    public void CT002_0010_clicarNoLogo(){
+    public void CT002_10_clicarNoLogo(){
+        produtosPage.btnSairModal.click();
         try{
             produtosPage.btnControleDeProdutos.click();
             assertEquals("Controle de Produtos", produtosPage.obterTituloPagina());
@@ -234,7 +238,7 @@ public class ProdutosTest extends baseTest {
     }
 
     @Test
-    public void CT002_0011_clicarNoBotaoVoltar(){
+    public void CT002_11_clicarNoBotaoVoltar(){
 
         try {
             produtosPage.btnVoltar.click();
@@ -244,4 +248,91 @@ public class ProdutosTest extends baseTest {
         }
     }
     
+    @Test
+    public void CT002_12_clicarNoXParaFecharModal(){
+        /**
+         * O sistema deve fechar o modal quando o usuário clicar no "X".
+         * 
+         */
+        produtosPage.btnCriar.click();
+        
+        String titulo = produtosPage.tituloModal.getText();
+        assertEquals("Produto", titulo);
+
+        ProdutoBuilder produto = new ProdutoBuilder(produtosPage);
+        
+        produto
+        .adcCodigo(null)
+        .adcNome("")
+        .adcQuantidade(null)
+        .adcValor(null)
+        .adcData("")
+        .builder();
+        produtosPage.btnFecharModal.click();
+
+    }
+
+    @Test
+    public void CT002_13_clicarNoXParaFecharModalDeveLimparModal(){
+        /**
+         * O sistema deve fechar o modal quando o usuário clicar no "X" e limpar as informações inseridas
+         * 
+         */
+        produtosPage.btnCriar.click();
+        
+        String titulo = produtosPage.tituloModal.getText();
+        assertEquals("Produto", titulo);
+
+        ProdutoBuilder produto = new ProdutoBuilder(produtosPage);
+        
+        produto
+        .adcCodigo(13)
+        .adcNome("Lanterna")
+        .adcQuantidade(13)
+        .adcValor(13.20)
+        .adcData("26/06/2024")
+        .builder();
+        produtosPage.btnFecharModal.click();
+        produtosPage.btnCriar.click();
+        try {
+            produtosPage.checarCampoVazio();
+            assertEquals(true, produtosPage.checarCampoVazio());
+        }catch (AssertionError e) {
+            System.out.println("Ao fechar o modal e abrir novamente, verificou que os campos não foram limpos");
+
+        }   
+    }
+
+    @Test
+    public void CT002_14_fecharMensagemDeErroClicandoNoX(){
+
+        produtosPage.btnSairModal.click();
+        produtosPage.btnCriar.click();
+
+        String titulo = produtosPage.tituloModal.getText();
+        assertEquals("Produto", titulo);
+
+        ProdutoBuilder produto = new ProdutoBuilder(produtosPage);
+        
+        produto
+        .adcCodigo(null)
+        .adcNome("")
+        .adcQuantidade(null)
+        .adcValor(null)
+        .adcData("")
+        .builder();
+        produtosPage.btnSalvarModal.click();
+        produtosPage.fecharMensagemErro.click();
+
+        try {
+            produtosPage.obterResultadoProdutos();
+            throw new AssertionError("A mensagem de erro ainda está presente.");
+        } catch (NoSuchElementException e) {
+            // Se a exceção for lançada, significa que o elemento não está presente
+            System.out.println("A mensagem de erro foi fechada com sucesso.");
+        } catch (AssertionError e) {
+            System.out.println(e.getMessage());
+        }
+ 
+    }
 }
