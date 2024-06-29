@@ -3,10 +3,13 @@ package automatizado.test;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
 
 import automatizado.page.LoginPO;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class LoginTest extends baseTest {
 
     private static LoginPO loginPage;
@@ -19,8 +22,7 @@ public class LoginTest extends baseTest {
 
     @Test
     public void TC001_001_loginComEmailNaoEncontrado() {
-        loginPage.inputEmail.sendKeys("teste@teste.com ");
-        loginPage.inputSenha.sendKeys("admin@123");
+        loginPage.executarLogin("teste@teste.com", "admin@123");
         loginPage.btnEntrar.click();
         String mensagem = loginPage.obterResultado();
         assertEquals(mensagem, "E-mail ou senha inválidos");
@@ -28,8 +30,7 @@ public class LoginTest extends baseTest {
 
     @Test
     public void TC001_002_loginComSenhaInvalida() {
-        loginPage.inputEmail.sendKeys("teste@teste.com ");
-        loginPage.inputSenha.sendKeys("admin@123");
+        loginPage.executarLogin("admin@admin.com", "dada");
         loginPage.btnEntrar.click();
         String mensagem = loginPage.obterResultado();
         assertEquals(mensagem, "E-mail ou senha inválidos");
@@ -37,17 +38,34 @@ public class LoginTest extends baseTest {
 
     @Test
     public void TC001_003_usuarioESenhaNull() {
-        loginPage.inputEmail.sendKeys("");
-        loginPage.inputSenha.sendKeys("");
-        loginPage.btnEntrar.click();
+        loginPage.executarLogin("", "");
         String mensagem = loginPage.obterResultado();
         assertEquals(mensagem, "Informe usuário e senha, os campos não podem ser brancos.");
     }
 
     @Test
-    public void TC001_004_loginValido() {
-        loginPage.inputEmail.sendKeys("admin@admin.com ");
-        loginPage.inputSenha.sendKeys("admin@123");
-        loginPage.btnEntrar.click();
+    public void TC001_004_usuarioNull() {
+        loginPage.executarLogin("", "admin@123");
+        String mensagem = loginPage.obterResultado();
+        assertEquals(mensagem, "Informe usuário e senha, os campos não podem ser brancos.");
+    }
+
+    @Test
+    public void TC001_005_senhaNull() {
+        loginPage.executarLogin("admin@admin.com", "");
+        String mensagem = loginPage.obterResultado();
+        assertEquals(mensagem, "Informe usuário e senha, os campos não podem ser brancos.");
+    }
+
+    @Test
+    public void TC001_006_loginValido() {
+        loginPage.executarLogin("admin@admin.com", "admin@123");
+    }
+
+    @Test
+    public void TC001_007_recuperarLogin() {
+        loginPage.executarLogin("admin", "admin@123");
+        String recuperaSenha = loginPage.linkRecuperarSenha.getText();
+        assertEquals(recuperaSenha, "Esqueci minha senha");
     }
 }
