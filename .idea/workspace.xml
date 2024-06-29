@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6f034576-4a76-490e-bc9c-77f2ff5a2345" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/SQA2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/automatizado/resource/chromedriver" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/automatizado/resource/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/automatizado/test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/automatizado/test/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/automatizado/test/baseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/automatizado/test/baseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/automatizado/page/BasePO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/automatizado/page/BasePO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/automatizado/page/LoginPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/automatizado/page/LoginPO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/automatizado/resource/chromedriver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/automatizado/test/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/automatizado/test/LoginTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/automatizado/test/baseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/automatizado/test/baseTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2iYKxLQKdhwCQddJhW55mXSi5jD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JUnit.LoginTest.CT001_003_loginComEmailNaoEncontrado.executor": "Run",
+    "JUnit.LoginTest.CT001_004_loginComSenhaInvalida.executor": "Run",
+    "JUnit.LoginTest.CT001_006_usuarioESenhaNull.executor": "Run",
+    "JUnit.LoginTest.TC001_001_loginComEmailNaoEncontrado.executor": "Run",
+    "JUnit.LoginTest.TC001_001_loginValido.executor": "Run",
+    "JUnit.LoginTest.TC001_002_loginComSenhaInvalida.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "gabriel",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/gabli/Desktop/SQA2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.LoginTest.TC001_002_loginComSenhaInvalida">
+    <configuration name="LoginTest.CT001_003_loginComEmailNaoEncontrado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trabalho_sqa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automatizado.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automatizado.test" />
+      <option name="MAIN_CLASS_NAME" value="automatizado.test.LoginTest" />
+      <option name="METHOD_NAME" value="CT001_003_loginComEmailNaoEncontrado" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.CT001_004_loginComSenhaInvalida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trabalho_sqa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automatizado.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automatizado.test" />
+      <option name="MAIN_CLASS_NAME" value="automatizado.test.LoginTest" />
+      <option name="METHOD_NAME" value="CT001_004_loginComSenhaInvalida" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.CT001_006_usuarioESenhaNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trabalho_sqa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automatizado.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automatizado.test" />
+      <option name="MAIN_CLASS_NAME" value="automatizado.test.LoginTest" />
+      <option name="METHOD_NAME" value="CT001_006_usuarioESenhaNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.TC001_001_loginComEmailNaoEncontrado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trabalho_sqa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automatizado.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automatizado.test" />
+      <option name="MAIN_CLASS_NAME" value="automatizado.test.LoginTest" />
+      <option name="METHOD_NAME" value="TC001_001_loginComEmailNaoEncontrado" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.TC001_002_loginComSenhaInvalida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trabalho_sqa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automatizado.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automatizado.test" />
+      <option name="MAIN_CLASS_NAME" value="automatizado.test.LoginTest" />
+      <option name="METHOD_NAME" value="TC001_002_loginComSenhaInvalida" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LoginTest.TC001_002_loginComSenhaInvalida" />
+        <item itemvalue="JUnit.LoginTest.TC001_001_loginComEmailNaoEncontrado" />
+        <item itemvalue="JUnit.LoginTest.CT001_006_usuarioESenhaNull" />
+        <item itemvalue="JUnit.LoginTest.CT001_004_loginComSenhaInvalida" />
+        <item itemvalue="JUnit.LoginTest.CT001_003_loginComEmailNaoEncontrado" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-f644763e9732-c0c073db" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6f034576-4a76-490e-bc9c-77f2ff5a2345" name="Changes" comment="" />
+      <created>1719662315285</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719662315285</updated>
+      <workItem from="1719662316431" duration="2720000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
